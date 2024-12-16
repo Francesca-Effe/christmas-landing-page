@@ -95,6 +95,12 @@ footer p:nth-child(1) {
     width: 360px;
 }
 
+@media(min-width:1345px) and (max-width:1920px){
+    .christmas-wishes{
+        left: 15%;
+    }
+}
+
 @media(max-width:768px){
     .christmas-wishes{
         left:15%;
