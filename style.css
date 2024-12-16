@@ -8,6 +8,7 @@ html,body{
     height: 100%;
     font-family: "Sour Gummy", sans-serif;
     background:#460E0E;
+    overflow: hidden;
 }
 a,p {
     text-decoration: none;
@@ -108,5 +109,23 @@ footer p:nth-child(1) {
     }
     a{
         font-size: 14px;
+    }
+}
+
+@media(max-width:360px){
+    .christmas-wishes h1{
+        font-size: 2em;
+        line-height: 1.2em;
+    }
+    nav{
+        padding:1em 2.5em;
+        font-size: 0.5em;
+    }
+    nav .logo img{
+        width: 100px;
+        height: 100px;
+    }
+    footer p{
+        font-size: 12px;
     }
 }
