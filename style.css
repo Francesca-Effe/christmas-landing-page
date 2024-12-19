@@ -17,6 +17,33 @@ a,p {
     font-weight: 600;
     color: #fff;
 }
+
+  .cta-overlay {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(84, 3, 3, 0.6); 
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: center;
+    animation: fade-out 15s ease-out forwards; 
+  }
+  
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 0.1;
+    }
+    100% {
+      display: none;
+      opacity: 0;
+    }
+  }
 .christmas-wishes{
     position: absolute;
     top: 20%;
@@ -78,7 +105,65 @@ nav{
     display: flex;
     gap: 1em;
 }
+.hamburger{
+    display: none;
+    background: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.menu-icon {
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color:white;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+ 
+  .change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
 
+  .change .bar2 {opacity: 0;}
+ 
+  .change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+  }
+
+.snow-wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 999;
+}
+.snow{
+    width: 10px;
+    height: 10px;
+    background-color:#fff;
+    border-radius: 50%;
+    animation: fallingSnow 6s linear infinite;
+
+    position: absolute;
+    left: 0;
+    top: -40px;
+}
+
+@keyframes fallingSnow{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(100vh);
+    }
+}
 
 footer{
     position: absolute;
@@ -116,12 +201,27 @@ footer p:nth-child(1) {
     a{
         font-size: 14px;
     }
+    .hamburger{
+        display: block;
+    }
+    .nav-items{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 5%;
+        width: auto;
+        z-index: 10;
+    }
+    .nav-items.show{
+        display: flex;
+    }
 }
 
-@media(max-width:360px){
+@media(max-width:360px) and (min-width:320px){
     .christmas-wishes h1{
         font-size: 2em;
-        line-height: 1.2em;
+        line-height: 2.4em;
     }
     nav{
         padding:1em 2.5em;

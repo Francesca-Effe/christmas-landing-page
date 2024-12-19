@@ -11,20 +11,34 @@
    
 </head>
 <body>
-    <div class="model"></div>
+    <div class="model">
+        <div class="cta-overlay">
+            <p>🖐️ Drag to rotate. 🔍 Scroll to zoom.</p>
+        </div>
+    </div>
 
 
     <nav>
         <div class="logo">
             <img src="./assets/FunkoPop_Logo.png" alt="funko-logo">
         </div>
-        <div class="nav-items">
-            <a href="#">Catalogue</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
+        <div class="nav-items" id="navItems">
+            <a href="https://funkoeurope.com/collections/shop-all">Catalogue</a>
+            <a href="https://investor.funko.com/governance/documents-and-charters/default.aspx">About</a>
+            <a href="https://funkoeuropehelp.zendesk.com/hc/en-us/requests/new">Contact</a>
         </div>
+        <button class="hamburger" id="hamburger">
+            <div class="menu-icon" onclick="myFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+              </div>  
+        </button>
     </nav>
      
+    <div class="snow-wrapper">
+        <div class="snow"></div>
+    </div>
     <div class="christmas-wishes">
         <h1> Happy Holidays!</h1>
      </div>
