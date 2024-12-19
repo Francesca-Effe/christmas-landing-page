@@ -95,6 +95,7 @@ nav{
     justify-content: space-between;
     align-items: center;
     z-index: 2;
+    overflow: hidden;
    
 }
  nav .logo img{
@@ -215,6 +216,10 @@ footer p:nth-child(1) {
     }
     .nav-items.show{
         display: flex;
+    }
+    .cta-overlay{
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
     }
 }
 
