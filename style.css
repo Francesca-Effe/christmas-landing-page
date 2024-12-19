@@ -3,27 +3,36 @@
     padding: 0;
     box-sizing: border-box;
 }
+@font-face {
+    font-family: 'comical_cartoon'; 
+    src: url('./assets/fonts/comical_cartoon-webfont.woff2') format('woff2'), 
+         url('./assets/fonts/comical_cartoon-webfont.woff') format('woff');  
+    font-weight: normal; 
+    font-style: normal;  
+}
+
+
 html,body{
     width: 100%;
     height: 100%;
-    font-family: "Sour Gummy", sans-serif;
-    background:#460E0E;
+    font-family: "comical_cartoon", sans-serif;
+    background:#9d2222;
     overflow: hidden;
 }
-a,p {
+ .cta-overlay p{
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: 600;
     color: #fff;
-}
+} 
 
   .cta-overlay {
     position: absolute;
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: rgba(84, 3, 3, 0.6); 
+    background: rgba(84, 3, 3, 0.4); 
     padding: 1rem 2rem;
     border-radius: 10px;
     color: #fff;
@@ -46,7 +55,7 @@ a,p {
   }
 .christmas-wishes{
     position: absolute;
-    top: 20%;
+    top: 30%;
     left: 30%;
     display: flex;
     justify-content: center;
@@ -54,7 +63,7 @@ a,p {
 }
 .christmas-wishes h1{
     color: white;
-    font-size: 6em;
+    font-size: 2rem;
     letter-spacing: 15px;
     font-weight: 600;
     -webkit-box-reflect: below 1px linear-gradient ( transparent, #000800);
@@ -84,6 +93,7 @@ a,p {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    background: transparent !important;
 }
 nav{
     position: absolute;
@@ -95,7 +105,9 @@ nav{
     justify-content: space-between;
     align-items: center;
     z-index: 2;
-    overflow: hidden;
+    background: url(./assets/NAVBAR_FunkoPop.png) no-repeat center center;
+    background-size: cover;
+    height: auto;
    
 }
  nav .logo img{
@@ -103,11 +115,32 @@ nav{
     height: 200px;
 }
 .nav-items{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 3%;
+    width: auto;
+    z-index: 10;
+    gap: 1rem;
+    margin: 1rem 0;
+    background: rgba(84, 3, 3, 0.4);
+    padding: 1rem ;
+    border-radius: 0 20% 0 20%;
+}
+.nav-items a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+}
+.nav-items.show{
     display: flex;
-    gap: 1em;
+    font-size: 0.5rem;
 }
 .hamburger{
-    display: none;
+    display: flex;
     background: none;
     color: white;
     font-size: 1.5rem;
@@ -177,6 +210,13 @@ footer{
     align-items: flex-end;
  
 }
+footer p{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+}
 footer p:nth-child(1) {
     width: 360px;
 }
@@ -190,20 +230,22 @@ footer p:nth-child(1) {
 @media(max-width:768px){
     .christmas-wishes{
         left:15%;
+        bottom: 70%;
     }
     .christmas-wishes h1{
-        font-size: 4em;
-        line-height: 1em;
+        font-size: 1.2rem;
+        line-height: 4rem;
     }
     nav .logo img{
-        width: 150px;
-        height: 150px;
+        width: 100px;
+        height: 100px;
     }
     a{
         font-size: 14px;
     }
     .hamburger{
         display: block;
+        font-size: 0.3rem;
     }
     .nav-items{
         display: none;
@@ -214,18 +256,24 @@ footer p:nth-child(1) {
         width: auto;
         z-index: 10;
     }
+    .nav-items a{  
+        font-size: 0.5rem;
+    }
     .nav-items.show{
         display: flex;
     }
-    .cta-overlay{
-        font-size: 1rem;
-        padding: 0.5rem 1rem;
+    .cta-overlay p{
+        font-size: 0.4rem;
     }
+    footer p{
+        font-size: 12px;
+    }
+  
 }
 
-@media(max-width:360px) and (min-width:320px){
+@media(max-width:360px) and (min-width:280px){
     .christmas-wishes h1{
-        font-size: 2em;
+        font-size: 0.5rem;
         line-height: 2.4em;
     }
     nav{
@@ -233,10 +281,31 @@ footer p:nth-child(1) {
         font-size: 0.5em;
     }
     nav .logo img{
-        width: 100px;
-        height: 100px;
+        width: 50px;
+        height: 50px;
     }
     footer p{
         font-size: 12px;
     }
+    .hamburger{
+        font-size: 0.5rem;
+    }
+    .snow{
+        width: 2px;
+        height: 2px;
+    }
+    .nav-items.show{
+        display: flex;
+        font-size: 0.5rem;
+    }
+    .nav-items a{  
+        font-size: 0.5rem;
+    }
+    .cta-overlay p{
+        font-size: 0.3rem;
+    }
+    footer p{
+        font-size: 8px;
+    }
+  
 }

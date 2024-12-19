@@ -32,6 +32,21 @@ document.addEventListener('DOMContentLoaded',()=>{
         snowWrapper.appendChild(snow);
     }
 })
+function resizeSnowflakes() {
+    const snowflakes = document.querySelectorAll('.snow');
+    snowflakes.forEach(snow => {
+        let size;
+        if (window.innerWidth < 768) {
+            size = Math.random() * 10 + 5; 
+        } else {
+            size = Math.random() * 20 + 5; 
+        }
+        snow.style.width = `${size}px`;
+        snow.style.height = `${size}px`;
+    });
+}
+
+window.addEventListener('resize', resizeSnowflakes);
 
 
 const ctaOverlay = document.querySelector('.cta-overlay');
