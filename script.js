@@ -37,7 +37,7 @@ function resizeSnowflakes() {
     snowflakes.forEach(snow => {
         let size;
         if (window.innerWidth < 768) {
-            size = Math.random() * 10 + 5; 
+            size = Math.random() * 5 + 5; 
         } else {
             size = Math.random() * 20 + 5; 
         }
@@ -62,8 +62,9 @@ const ctaOverlay = document.querySelector('.cta-overlay');
 
 
 
-const scene = new THREE.Scene(); 
-scene.background = new THREE.Color(0x460E0E);
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x460E0E); 
+
 
 const camera = new THREE.PerspectiveCamera(
     70,
